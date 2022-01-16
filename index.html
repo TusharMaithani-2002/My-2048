@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>2048</title>
+    <link rel="stylesheet" href="style.css">
+    <script >
+        // let b = window.confirm("are u there?")
+        // if(b) {
+        //     console.log("yes u are there");
+        // } else {
+        //      // let b = window.confirm("are u there?")
+        // if(b) {
+        //     console.log("yes u are there");
+        // } else {
+        //     console.log("You are not there");
+        // }console.log("You are not there");
+        // }
+    </script>
+</head>
+<body ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" ontouchend="touchEnd()">
+    <div class="container">
+    <div id="game">
+        <div class="tile"><div id="t-1"></div></div>
+        <div class="tile"><div id="t-2"></div></div>
+        <div class="tile"><div id="t-3"></div></div>
+        <div class="tile"><div id="t-4"></div></div>
+        <div class="tile"><div id="t-5"></div></div>
+        <div class="tile"><div id="t-6"></div></div>
+        <div class="tile"><div id="t-7"></div></div>
+        <div class="tile"><div id="t-8"></div></div>
+        <div class="tile"><div id="t-9"></div></div>
+        <div class="tile"><div id="t-10"></div></div>
+        <div class="tile"><div id="t-11"></div></div>
+        <div class="tile"><div id="t-12"></div></div>
+        <div class="tile"><div id="t-13"></div></div>
+        <div class="tile"><div id="t-14"></div></div>
+        <div class="tile"><div id="t-15"></div></div>
+        <div class="tile"><div id="t-16"></div></div>
+    </div>
+
+    <br><br>
+    <div class="score-box">
+    <div id="score">Score : 0</div><br>
+    <div id="high-score">HighScore : 0</div><br>
+    <button class="btn" id="music-btn">music OFF</button>
+    <button class="btn" id="grid-btn">grid OFF</button>
+    <!-- You are pressing : <div id="controlUI"> </div> -->
+    <div id="game-over" onclick="start()">
+        <div class="overlay-text">GAME OVER!</div>
+        <div class="sub-text">Click anywhere, or press enter to start  a new game</div>
+    </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

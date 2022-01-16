@@ -1,0 +1,141 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    padding: 0;margin: 0;
+}
+#controlUI, #score,#high-score {
+    /* background-color: rgb(231, 182, 182); */
+    color:#222;
+    display:inline-block;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(224, 186, 15);
+    padding: 0;
+    /* padding: auto; */
+    /* margin: auto; */
+    width:100vw;
+    height:100vh;
+    
+}
+
+#game {
+    padding: 10px 0px 10px 10px;
+    border: 2px solid rgb(16, 85, 195);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    background-color: #ee6520;
+    width:620px;
+    height: 620px;
+}
+#game div {
+    display: inline-block;
+}
+
+.tile{
+  width:120px;
+  height: 120px;
+  background-color: #e28c5a;
+  border-radius: 8px;
+  margin: auto;
+   color: white;
+   margin: 8px;
+   font-size: 50px;
+   text-align: center;
+}
+
+.tile div {
+    font-size: 50px;
+    margin-top: 35px;
+}
+
+#game-over {
+    position: fixed;
+    display: none;
+    cursor: pointer;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(1, 1, 9, 0.9);
+    z-index: 2;
+}
+
+.overlay-text {
+   position: absolute;
+   top:30%;
+   left:50%;
+   font-size:64px;
+   color: white;
+   text-align: center;
+   transform: translate(-50%,50%);
+   text-shadow:1px 1px 0 #000, -1px 1px 0 #000, 1px -1px #000,-1px -1px 0 #000;
+}
+
+.sub-text {
+  position:absolute;
+  font-size:25px;
+  top:40%;
+  left:50%;
+  color:white;
+  text-align: center;
+  transform: translate(-50%,150%);
+}
+
+.score-box,#score,#high-score,#controlUI{
+    font-size: 30px;
+    color:rgb(168, 100, 12);
+}
+.btn{
+    width:85px;
+    height:40px;
+    color:rgb(169, 14, 14);
+    font-size: 18px;
+    background-color: rgb(74, 198, 222);
+    border-radius: 50px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid rgb(246, 48, 48);
+}
+@media screen and (max-width:410px) {
+    .container{
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        height:100vh;
+        width:100vw;
+        padding: 0;
+    }
+    #game{
+        /* padding: 2px 0px 2px 2px; */
+        border-radius: 16px;
+        background-color: #ee6520;
+        width:350px;
+        height:350px;
+        padding: auto;
+        /* margin:auto; */
+        
+    }
+    .tile{
+        width:17vw;
+        height: 17vw;
+        background-color: #666;
+        /* text-align: center; */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: auto; */
+      
+    }
+    .tile div {
+        font-size: 30px;
+        text-align: center;
+        margin: auto;
+    }
+}
