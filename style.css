@@ -103,7 +103,7 @@
     margin: 0;
     border: 2px solid rgb(246, 48, 48);
 }
-@media screen and (max-width:410px) {
+@media screen and (max-width:450px) {
     .container{
         flex-wrap: wrap;
         /* flex-direction: column; */
