@@ -42,12 +42,13 @@
         <div class="tile"><div id="t-16"></div></div>
     </div>
 
-    <br><br>
     <div class="score-box">
     <div id="score">Score : 0</div><br>
-    <div id="high-score">HighScore : 0</div><br>
-    <button class="btn" id="music-btn">music OFF</button>
-    <button class="btn" id="grid-btn">grid OFF</button>
+    <div id="high-score">HighScore : 0</div>
+    <div class="btn-container">
+    <button class="btn" id="music-btn" onclick="musicSetting()">music OFF</button>
+    <button class="btn" id="grid-btn" onclick="gridSetting()">grid OFF</button>
+    </div>
     <!-- You are pressing : <div id="controlUI"> </div> -->
     <div id="game-over" onclick="start()" ontouchstart="start()">
         <div class="overlay-text">GAME OVER!</div>
