@@ -10,6 +10,7 @@ let musicOn=true;
 const gameMusic = new Audio('music.mp3');
 gameMusic.play();
 gameMusic.loop = true;
+
 function start() {
     changeColor();
     //loop through all tiles 
@@ -147,17 +148,31 @@ document.getElementById('grid-btn').addEventListener('click',()=>{
         document.getElementById('game').style.backgroundColor = "#CBAE57";
     }
 })
-document.getElementById('music-btn').addEventListener('click',()=>{
-  if(musicOn) {
-      musicOn = false;
-      gameMusic.pause();
-      document.getElementById('music-btn').innerHTML = "music ON"
-  } else {
-      musicOn = true;
-      gameMusic.play();
-      document.getElementById('music-btn').innerHTML = "music OFF"
-  }
-})
+
+// function gridSetting() {
+//     document.getElementById('grid-btn').addEventListener('click',()=>{
+//         if(gridOn) {
+//             gridOn = false; 
+//             document.getElementById('grid-btn').innerHTML = "grid ON";
+//             document.getElementById('game').style.backgroundColor = "#ee6520";
+//         } else {
+//             gridOn = true;
+//             document.getElementById('grid-btn').innerHTML = "grid OFF";
+//             document.getElementById('game').style.backgroundColor = "#CBAE57";
+//         }
+//     })
+// }
+// document.getElementById('music-btn').addEventListener('click',()=>{
+//   if(musicOn) {
+//       musicOn = false;
+//       gameMusic.pause();
+//       document.getElementById('music-btn').innerHTML = "music ON"
+//   } else {
+//       musicOn = true;
+//       gameMusic.play();
+//       document.getElementById('music-btn').innerHTML = "music OFF"
+//   }
+// })
 // checking for touch events 
 let startingX,startingY,movingX,movingY;
 
@@ -173,18 +188,18 @@ function touchMove(event) {
 }
 
 function touchEnd() {
-    if(startingX+50 < movingX) {
+    if(startingX+100 < movingX) {
         // console.log('right');
         right();
-    } else if (startingX-50 > movingX) {
+    } else if (startingX-100 > movingX) {
         // console.log('left');
         left();
     }
 
-    if(startingY+50 < movingY) {
+    if(startingY+100 < movingY) {
         // console.log('down');
         down();
-    } else if(startingY-50 > movingY) {
+    } else if(startingY-100 > movingY) {
         // console.log('up');
         up();
     }
@@ -272,7 +287,7 @@ function row(aa,bb,cc,dd) {
 
    let z = 0;
    var inputs = [aa,bb,cc,dd];
-   let input = [a,b,c,d];
+//    let input = [a,b,c,d];
    let output = [];
    while(z < res.length) {
     document.getElementById("t-"+inputs[z]).innerHTML = ""+res[z];
@@ -298,4 +313,16 @@ function changeHighScore() {
         highscore = score;
         localStorage.setItem("highscore",JSON.stringify(highscore));
     } 
+}
+
+function musicSetting() {
+    if(musicOn) {
+        musicOn = false;
+        gameMusic.pause();
+        document.getElementById('music-btn').innerHTML = "music ON"
+    } else {
+        musicOn = true;
+        gameMusic.play();
+        document.getElementById('music-btn').innerHTML = "music OFF"
+    }
 }
