@@ -51,10 +51,9 @@
 }
 
 .tile div {
-    font-size: 50px;
-    margin-top: 35px;
+    font-size: 6vmin;
+    margin-top: 3vmin;
 }
-
 #game-over {
     position: fixed;
     display: none;
